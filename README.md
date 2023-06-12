@@ -11,7 +11,7 @@ Password: password
 
 USER LOGIN:
 
-Username: harry@den.com
+Username: tibebe@solo.com
 Password: code0
 
 DON'T FORGET TO CREATE A DATABASE NAMING "ecomm" AND IMPORT THE SQL FILE TO RUN.

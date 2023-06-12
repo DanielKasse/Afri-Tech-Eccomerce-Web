@@ -96,7 +96,7 @@
     .pro-grand {
   display: grid;
   place-content: center;
-  background: #d2d6de;
+  background: #fff;
 }
 
 .pro-container{
