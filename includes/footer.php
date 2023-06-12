@@ -3,6 +3,6 @@
       <div class="pull-right hidden-xs">
         <b>All rights reserved</b>
       </div>
-      <strong>Copyright &copy; 2023 Brought to You By AFRI TECH COMPANY</a></strong>
+      <strong>Copyright &copy; 2023 Brought to You By Afri-Tech COMPANY</a></strong>
     </div>
 </footer>
