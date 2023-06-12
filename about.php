@@ -4,7 +4,42 @@
 <div class="wrapper">
 
 	<?php include 'includes/navbar.php'; ?>
-	 
+	 <style>
+				.prof-card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		max-width: 300px;
+		margin: auto;
+		text-align: center;
+		}
+
+		.prof-title {
+		color: grey;
+		font-size: 18px;
+		}
+
+		.contact-button {
+		border: none;
+		outline: 0;
+		display: inline-block;
+		padding: 8px;
+		color: white;
+		background-color: #000;
+		text-align: center;
+		cursor: pointer;
+		width: 100%;
+		font-size: 18px;
+		}
+
+		.social-link {
+		text-decoration: none;
+		font-size: 22px;
+		color: black;
+		}
+
+		.contact-button:hover, a:hover {
+		opacity: 0.7;
+		}
+	 </style>
 	  <div class="content-wrapper">
 	    <div class="container">
 
@@ -22,52 +57,39 @@
 	        				unset($_SESSION['error']);
 	        			}
 	        		?>
-	        		<p>daniel</p>
-
-
-
-
-
-
-                    
-		            
-		       		<?php
-		       			$month = date('m');
-		       			$conn = $pdo->open();
-
-		       			try{
-		       			 	$inc = 3;	
-						    $stmt = $conn->prepare("SELECT *, SUM(quantity) AS total_qty FROM details LEFT JOIN sales ON sales.id=details.sales_id LEFT JOIN products ON products.id=details.product_id WHERE MONTH(sales_date) = '$month' GROUP BY details.product_id ORDER BY total_qty DESC LIMIT 6");
-						    $stmt->execute();
-						    foreach ($stmt as $row) {
-						    	$image = (!empty($row['photo'])) ? 'images/'.$row['photo'] : 'images/noimage.jpg';
-						    	$inc = ($inc == 3) ? 1 : $inc + 1;
-	       						if($inc == 1) echo "<div class='row'>";
-	       						echo "
-	       							<div class='col-sm-4'>
-	       								<div class='box box-solid'>
-		       								<div class='box-body prod-body'>
-		       									<img src='".$image."' width='100%' height='230px' class='thumbnail'>
-		       									<h5><a href='product.php?product=".$row['slug']."'>".$row['name']."</a></h5>
-		       								</div>
-		       								<div class='box-footer'>
-		       									<b>&#36; ".number_format($row['price'], 2)."</b>
-		       								</div>
-	       								</div>
-	       							</div>
-	       						";
-	       						if($inc == 3) echo "</div>";
-						    }
-						    if($inc == 1) echo "<div class='col-sm-4'></div><div class='col-sm-4'></div></div>"; 
-							if($inc == 2) echo "<div class='col-sm-4'></div></div>";
-						}
-						catch(PDOException $e){
-							echo "There is some problem in connection: " . $e->getMessage();
-						}
-
-						$pdo->close();
-
-		       		?> 
+					<div class='col-sm-4'>
+						<div class='box box-solid'>
+							<div class='box-body prod-body'>
+								<img src="./images/male3.jpg" alt="Dani" style="width:100%">
+								<h3>Daniel Yetwale</h3>
+							</div>
+							<div class='box-footer'>
+								<p>1311593</p>	
+							</div>
+						</div>
+					</div>
+					<div class='col-sm-4'>
+						<div class='box box-solid'>
+							<div class='box-body prod-body'>
+								<img src="./images/Tibe.jpg" alt="Dani" style="width:100%">
+								<h3>Tibebe Solomon</h3>
+							</div>
+							<div class='box-footer'>
+								<p>1311593</p>	
+							</div>
+						</div>
+					</div>
+					<div class='col-sm-4'>
+						<div class='box box-solid'>
+							<div class='box-body prod-body'>
+								<img src="./images/Wendimu.jpg" alt="Dani" style="width:100%">
+								<h3>Wendimu Sitotaw</h3>
+							</div>
+							<div class='box-footer'>
+								<p>1308027</p>	
+							</div>
+						</div>
+					</div>
 	        	</div>
 	        	<div class="col-sm-3">
 	        		<?php include 'includes/sidebar.php'; ?>
