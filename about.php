@@ -75,7 +75,7 @@
 								<h3>Tibebe Solomon</h3>
 							</div>
 							<div class='box-footer'>
-								<p>1311593</p>	
+								<p>1306941</p>	
 							</div>
 						</div>
 					</div>
