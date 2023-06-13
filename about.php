@@ -71,7 +71,7 @@
 					<div class='col-sm-4'>
 						<div class='box box-solid'>
 							<div class='box-body prod-body'>
-								<img src="./images/Tibe.jpg" alt="Dani" style="width:100%">
+								<img src="./images/Tibe.jpg" alt="Tibe" style="width:100%">
 								<h3>Tibebe Solomon</h3>
 							</div>
 							<div class='box-footer'>
@@ -82,7 +82,7 @@
 					<div class='col-sm-4'>
 						<div class='box box-solid'>
 							<div class='box-body prod-body'>
-								<img src="./images/Wendimu.jpg" alt="Dani" style="width:100%">
+								<img src="./images/Wendimu.jpg" alt="Wendi" style="width:100%">
 								<h3>Wendimu Sitotaw</h3>
 							</div>
 							<div class='box-footer'>
