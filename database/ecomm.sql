@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `type`, `firstname`, `lastname`, `address`, `contact_info`, `photo`, `status`, `activate_code`, `reset_code`, `created_on`) VALUES
-(1, 'admin@admin.com', '$2y$10$0SHFfoWzz8WZpdu9Qw//E.tWamILbiNCX7bqhy3od0gvK5.kSJ8N2', 1, 'Afri', 'Tech', '', '', 'thanos1.jpg', 1, '', '', '2023-05-01'),
+(1, 'admin@afri.tech', '$2y$10$0SHFfoWzz8WZpdu9Qw//E.tWamILbiNCX7bqhy3od0gvK5.kSJ8N2', 1, 'Afri', 'Tech', '', '', 'thanos1.jpg', 1, '', '', '2023-05-01'),
 (9, 'tibebe@solo.com', '$2y$10$Oongyx.Rv0Y/vbHGOxywl.qf18bXFiZOcEaI4ZpRRLzFNGKAhObSC', 0, 'Tibebe', 'Solomon', 'Bahir Dar City, BDU Occidental', '0902735719', 'male2.png', 1, 'k8FBpynQfqsv', 'wzPGkX5IODlTYHg', '2023-05-09'),
 (12, 'dan@gmail.com', '$2y$10$ozW4c8r313YiBsf7HD7m6egZwpvoE983IHfZsPRxrO1hWXfPRpxHO', 0, 'Daniel', 'Yetwale', 'Bahir Dar', '0923467881', 'male3.jpg', 1, '', '', '2023-07-09');
 
