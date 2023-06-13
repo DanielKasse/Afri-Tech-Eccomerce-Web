@@ -67,13 +67,13 @@
 								</p>
       		<div class="row">
     			<div class="col-xs-4">
-          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signup"><i class="fa fa-pencil"></i> Register</button>
+          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signup"><i class="fa fa-pencil"></i> SIGN UP</button>
         		</div>
       		</div>
     	</form>
      
       <div>Already have an account?
-      <a href="login.php">Login</a><br></div>
+      <a href="login.php">SIGN IN</a><br></div>
       <a href="index.php"><i class="fa fa-home"></i> Home</a>
   	</div>
     <div class="text-center mt-5 text-muted">

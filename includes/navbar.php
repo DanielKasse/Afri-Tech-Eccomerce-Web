@@ -99,8 +99,8 @@
             }
             else{
               echo "
-                <li><a href='login.php'>LOGIN</a></li>
-                <li><a href='signup.php'>SIGNUP</a></li>
+                <li><a href='login.php'>SIGN IN</a></li>
+                <li><a href='signup.php'>SIGN UP</a></li>
               ";
             }
           ?>
