@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <div class="box-header with-border">
+            <!-- <div class="box-header with-border">
               <div class="pull-right">
                 <form method="POST" class="form-inline" action="sales_print.php">
                   <div class="input-group">
@@ -36,7 +36,7 @@
                   <button type="submit" class="btn btn-success btn-sm btn-flat" name="print"><span class="glyphicon glyphicon-print"></span> Print</button>
                 </form>
               </div>
-            </div>
+            </div> -->
             <div class="box-body">
               <table id="example1" class="table table-bordered">
                 <thead>

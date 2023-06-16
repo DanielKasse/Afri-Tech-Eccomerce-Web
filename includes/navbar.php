@@ -12,43 +12,43 @@
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="index.php">HOME</a></li>
-          <li><a href="about.php">ABOUT US</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">CATEGORY <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <?php
              
-                $conn = $pdo->open();
-                try{
-                  $stmt = $conn->prepare("SELECT * FROM category");
-                  $stmt->execute();
-                  foreach($stmt as $row){
-                    echo "
-                      <li><a href='category.php?category=".$row['cat_slug']."'>".$row['name']."</a></li>
+             $conn = $pdo->open();
+             try{
+               $stmt = $conn->prepare("SELECT * FROM category");
+               $stmt->execute();
+               foreach($stmt as $row){
+                 echo "
+                 <li><a href='category.php?category=".$row['cat_slug']."'>".$row['name']."</a></li>
                     ";                  
                   }
                 }
                 catch(PDOException $e){
                   echo "There is some problem in connection: " . $e->getMessage();
                 }
-
+                
                 $pdo->close();
-
-              ?>
+                
+                ?>
             </ul>
           </li>
+          <li><a href="about.php">ABOUT US</a></li>
         </ul>
         <form method="POST" class="navbar-form navbar-left" action="search.php">
           <div class="input-group">
               <input type="text" class="form-control" id="navbar-search-input" name="keyword" placeholder="Search for Product" required>
               <span class="input-group-btn" id="searchBtn" style="display:none;">
-                  <button type="submit" class="btn btn-default btn-flat"><i class="fa fa-search"></i> </button>
+                <button type="submit" class="btn btn-default btn-flat"><i class="fa fa-search"></i> </button>
               </span>
-          </div>
-        </form>
-      </div>
-      <!-- /.navbar-collapse -->
-      <!-- Navbar Right Menu -->
+            </div>
+          </form>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="dropdown messages-menu">

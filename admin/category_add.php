@@ -1,10 +1,14 @@
 
 <?php
 	include 'includes/session.php';
-
+	function replaceSpacesWithDashes($str) {
+		$str = str_replace(' ', '-', $str);
+		return $str;
+	}
+	
 	if(isset($_POST['add'])){
 		$name = $_POST['name'];
-
+		$cat_slug = replaceSpacesWithDashes($name);
 		$conn = $pdo->open();
 
 		$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM category WHERE name=:name");
@@ -16,8 +20,8 @@
 		}
 		else{
 			try{
-				$stmt = $conn->prepare("INSERT INTO category (name) VALUES (:name)");
-				$stmt->execute(['name'=>$name]);
+				$stmt = $conn->prepare("INSERT INTO category (name, cat_slug) VALUES (:name, :cat_slug)");
+				$stmt->execute(['name'=>$name, 'cat_slug'=> $cat_slug]);
 				$_SESSION['success'] = 'Category added successfully';
 			}
 			catch(PDOException $e){
