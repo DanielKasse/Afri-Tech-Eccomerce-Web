@@ -56,13 +56,12 @@
 				$set='123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 				$code=substr(str_shuffle($set), 0, 12);
 
-			//	try{
 					$stmt = $conn->prepare("INSERT INTO users (email, password, firstname, lastname, activate_code, created_on) VALUES (:email, :password, :firstname, :lastname, :code, :now)");
 					$stmt->execute(['email'=>$email, 'password'=>$password, 'firstname'=>$firstname, 'lastname'=>$lastname, 'code'=>$code, 'now'=>$now]);
 					$userid = $conn->lastInsertId();	
 					$output = 
 					"<h2>Thank you for Registering.</h2>
-					<p>Your Account:</p>
+					<p>Your Account: ".$firstname." ".$lastname."</p>
 					<p>Email: ".$email."</p>
 					<p>Please click the link below to activate your account.</p>
 					<a href='http://localhost/Afri-Tech-Eccomerce-Web/activate.php?code=".$code."&user=".$userid."'>Activate Account</a>";
@@ -78,10 +77,9 @@
 					$mail->setFrom('wd.concepts00@gmail.com', 'afri');
 					$mail->addAddress($email);
 					$mail->isHTML(true);
-					$mail->Subject = 'Afri-Tech Password Reset';
+					$mail->Subject = 'Afri-Tech Account Activation';
 					$mail->Body = $message;
 					if ($mail->send()) {
-						// $_SESSION['success'] = 'Password reset link sent';
 						unset($_SESSION['firstname']);
 				        unset($_SESSION['lastname']);
 				        unset($_SESSION['email']);
@@ -89,62 +87,11 @@
 				        $_SESSION['success'] = 'Account created. Check your email to activate.';
 				        header('location: signup.php');
 					  } else {
-						$_SESSION['error'] = 'Failed to send password reset email';
+						$_SESSION['error'] = 'Failed to send account activation email';
 				  
 					  }
-					//Load phpmailer
-		    		//require 'vendor/autoload.php';
-
-		    		// $mail = new PHPMailer(true);                             
-				    // try {
-				    //     //Server settings
-				    //     $mail->isSMTP();                                     
-				    //     $mail->Host = 'smtp.gmail.com';                      
-				    //     $mail->SMTPAuth = true;                               
-				    //     $mail->Username = 'testsourcecodester@gmail.com';     
-				    //     $mail->Password = 'mysourcepass';                    
-				    //     $mail->SMTPOptions = array(
-				    //         'ssl' => array(
-				    //         'verify_peer' => false,
-				    //         'verify_peer_name' => false,
-				    //         'allow_self_signed' => true
-				    //         )
-				    //     );                         
-				    //     $mail->SMTPSecure = 'ssl';                           
-				    //     $mail->Port = 465;                                   
-
-				    //     $mail->setFrom('testsourcecodester@gmail.com');
-				        
-				    //     //Recipients
-				    //     $mail->addAddress($email);              
-				    //     $mail->addReplyTo('testsourcecodester@gmail.com');
-				       
-				    //     //Content
-				    //     $mail->isHTML(true);                                  
-				    //     $mail->Subject = 'ECommerce Site Sign Up';
-				    //     $mail->Body    = $message;
-
-				    //     $mail->send();
-
-				    //     unset($_SESSION['firstname']);
-				    //     unset($_SESSION['lastname']);
-				    //     unset($_SESSION['email']);
-
-				    //     $_SESSION['success'] = 'Account created. Check your email to activate.';
-				    //     header('location: signup.php');
-
-				    // } 
-				    // catch (Exception $e) {
-				    //     $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
-				    //     header('location: signup.php');
-				    // }
-
 
 				}
-				// catch(PDOException $e){
-				// 	$_SESSION['error'] = $e->getMessage();
-				// 	header('location: register.php');
-				// }
 
 				$pdo->close();
 

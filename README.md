@@ -1,4 +1,4 @@
-# ecommerce
+# afri-tech ecommerce
                          : : : : : LOGIN DETAILS : : : : : 
 
 ADMIN PANEL LOGIN:
@@ -6,7 +6,7 @@ ADMIN PANEL LOGIN:
 >> NOTE : (for admin panel, login from the user's login)
 >>Enter the following details in Login for Admin Panel.
 
-Username: admin@admin.com
+Username: admin@afri.tech
 Password: password
 
 USER LOGIN:
@@ -19,10 +19,8 @@ WITHOUT THE DATABASE THE PROJECT WON'T RUN.
 
 >>DATABASE FILE IS INSIDE "database" FOLDER!
 
-***** IF YOU FIND ANY ERRORS OR ANY PROBLEMS RELATED THIS PROGRAM, FEEL FREE TO CONTACT US *****  
+*** IF YOU FIND ANY ERRORS OR ANY PROBLEMS RELATED THIS PROGRAM, FEEL FREE TO CONTACT US ***  
 
-***** LEAVE A COMMENT IF YOU LOVED OUR WORK *****
+*** LEAVE A COMMENT IF YOU LOVED OUR WORK ***
 
-***** FOR MORE PROJECTS :- https://code-projects.org/ *****
-
-#THANK YOU FOR DOWNLOADING
+#THANK YOU!
